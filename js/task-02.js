@@ -9,20 +9,22 @@ const ingredients = [
 
 
 const ingredientsRef = document.querySelector('#ingredients');
-
+ 
 
 const createListOfIngredients = (ingredients) => {
+  let arrayOfingredients = [];
   for (let i = 0; i < ingredients.length; i += 1){
     const ingredientItem = document.createElement('li');
 
 ingredientItem.textContent = ingredients[i];
 
-ingredientItem.classList.add('item');
+    ingredientItem.classList.add('item');
 
-ingredientsRef.append(ingredientItem);
-    
+    arrayOfingredients.push(ingredientItem);
+     
   }
-  return;
+ 
+  return ingredientsRef.append(...arrayOfingredients);
 }
-
+debugger;
 createListOfIngredients(ingredients);
