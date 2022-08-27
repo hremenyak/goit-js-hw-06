@@ -10,6 +10,8 @@ nameInputRef.addEventListener('input', onNameInput);
 function onNameInput(event) {
 
       nameOutputRef.textContent = event.currentTarget.value;
-    if (event.currentTarget.value === '') { nameOutputRef.textContent = 'Anonymous'}; 
+  if (event.currentTarget.value === '') {
+    nameOutputRef.textContent = 'Anonymous'
+  }; 
     
 }
